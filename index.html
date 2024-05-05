@@ -125,7 +125,7 @@
 <body>
     <!-- menu navbar-->
     <header class="container-fluid p-0">
-        <nav class="navbar fixed-top navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark"">
             <div class="container-fluid">
               <a class="navbar-brand" href="https://smapluspgri.sch.id" target="_blank">
                 <img src="image/Logo-Pesat.png" alt="Logo pesat" width="40px" class="d-inline-block align-text-top">
@@ -174,7 +174,7 @@
               <div class="section1-1">
                 <h1 class="mb-4">lorem ipsum dolor sit amet consectetur.</h1>
                 <p>lorem ipsum dolor sit amet consectetur, adipisicing elit. maxime quaerat tenetur corporis, delectus labore dolores!</p>
-                <button class="btn btn-lg btn-warning mt-4">Button</button>
+                <button class="btn btn-lg btn btn-dark ">Button</button>
               </div>
             </div>
         </section>
@@ -189,14 +189,18 @@
                     </div>
                     <div class="col-sm-6">
                       <h1 class="mb-4">Lorem ipsum dolor sit amet consectetur.</h1>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt ipsum, accusantium quasi beatae quisquam id at debitis explicabo, pariatur dolores non.</p>
-                      <button type="button" class="btn btn-primary position-relative">
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat unde officia quia nobis, pariatur commodi doloremque magnam optio porro, molestias recusandae aliquam assumenda! Quaerat tenetur soluta explicabo. Doloribus, maiores laborum!</p>
+                      <button type="button" class="badge text-bg-success">
                         Inbox
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <span class="badge text-bg-success">
                           99+
                           <span class="visually-hidden">unread messages</span>
                         </span>
                       </button>
+                      <div class="p-2">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-content="Popover">
+                          <i class="bi-question-circle-fill"></i>
+                        </span>
                     </div>
                   </div>
                 </div>
@@ -353,6 +357,10 @@
             </div>
 <script src="bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
 <script>
     AOS.init();
   </script>
